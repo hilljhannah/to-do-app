@@ -4,7 +4,7 @@ function onReady() {
   const toDoList = document.getElementById('toDolist');
 
   addToDoForm.addEventListener('submit', () => {
-
+    event.preventDefault();
     // get the text //
     let title = newToDoText.value;
 
