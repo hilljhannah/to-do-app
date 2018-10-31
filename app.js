@@ -9,7 +9,7 @@ function onReady() {
   function createNewToDo() {
 
     // gets text for the title of each to-do
-    const newToDoText = document.getElementByID('newToDoText');
+    const newToDoText = document.getElementById('newToDoText');
     if (!newToDoText.value) { return; }
     // adds to-do to array
     toDos.push({
