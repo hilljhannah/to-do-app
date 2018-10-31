@@ -42,8 +42,16 @@ function onReady() {
       // updates the DOM
       toDoList.appendChild(newLi);
       newLi.appendChild(checkbox);
+
+      // delete button
       const minusBtn = document.getElementById('minusBtn');
+      //append to newLi
       newLi.append(minusBtn);
+      // event listener
+      minusBtn.addEventListener('click'), event => {
+        event.preventDefault();
+        delete('newLi');
+      }
   });
  }
 
@@ -58,11 +66,6 @@ function onReady() {
   renderTheUI();
 }
 
-
-  minusBtn.addEventListener('delete', event => {
-    event.preventDefault();
-    delete(li);
-  });
 
 
 window.onload = function() {
