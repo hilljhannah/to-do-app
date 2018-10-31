@@ -1,7 +1,7 @@
 function onReady() {
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
-  const toDoList = document.getElementById('toDolist');
+  const toDoList = document.getElementById('toDoList');
 
 // takes a type and a listener which is a function
 // ES6 arrow function == standard anonymous function
@@ -22,8 +22,7 @@ function onReady() {
 
     // create delete
     let minusBtn = document.createElement('button');
-    minusBtn.innerHTML = '<span>Delete</span>' ;;
-
+    minusBtn.innerHTML = '<span>Delete</span>';;
 
     // set the title
     newLi.textContent = title;
@@ -38,8 +37,15 @@ function onReady() {
 
     // empty the input
     newToDoText.value = '';
-    
+
+    // event listener for minus button (waiting for click)
+    minusBtn.addEventListener('click', function() {
+      newLi.parentNode.removeChild(newLi);
+    })
+
+    console.log(title);
   });
-window.onload =  function() {
-  onReady();
-};
+
+  window.onload =  function() {
+    onReady();
+}};
