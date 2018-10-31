@@ -13,10 +13,10 @@ function onReady() {
     if (!newToDoText.value) { return; }
     // adds to-do to array
     toDos.push({
-      // assigns value of text input to the "title" key
+      // assigns value of text input(newToDoText) to the "title" key
       title: newToDoText.value,
       complete: false,
-      id: id.value,
+      id: ++id.value,
     });
 
 
