@@ -1,4 +1,5 @@
 function onReady() {
+  let id = 0
   const toDos = [];
 
   // html form
@@ -14,7 +15,8 @@ function onReady() {
     toDos.push({
       // assigns value of text input to the "title" key
       title: newToDoText.value,
-      complete: false
+      complete: false,
+      id: id.value,
     });
 
 
