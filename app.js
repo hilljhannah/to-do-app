@@ -27,7 +27,6 @@ function onReady() {
     renderTheUI();
   }
 
-
   function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
     // sets li to empty string before the function
@@ -45,16 +44,12 @@ function onReady() {
 
       // delete button
       const minusBtn = document.getElementById('minusBtn');
-      //append to newLi
-      newLi.append(minusBtn);
-      // event listener
-      minusBtn.addEventListener('click'), event => {
-        event.preventDefault();
-        delete('newLi');
-      }
   });
- }
+}
 
+ minusBtn.addEventListener('click', function() {
+      newLi.parentNode.removeChild(newLi);
+});
 
 // event listener
   addToDoForm.addEventListener('submit', event => {
