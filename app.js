@@ -12,7 +12,7 @@ function onReady() {
     let title = newToDoText.value;
 
     // create new Li
-    let newLi = document.createElement('li');
+    let newLi = document.createElement('Li');
 
     // create a new input
     let checkbox = document.createElement('input');
@@ -46,6 +46,8 @@ function onReady() {
     console.log(title);
   });
 
+};
+
   window.onload =  function() {
     onReady();
-}};
+};
