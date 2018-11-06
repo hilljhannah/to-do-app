@@ -33,7 +33,7 @@ function onReady() {
     toDoList.textContent = '';
     toDos.forEach(function(toDo) {
       // create li and checkbox
-      const newLi = document.createElement('li');
+      const newLi = document.createElement('Li');
       const checkbox = document.createElement('input');
       checkbox.type = "checkbox";
       // adds title next to newLi
