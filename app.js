@@ -21,11 +21,17 @@ function onReady() {
 
 
     newToDoText.value = '';
+
 // should be called each time the state changes
-
-
     renderTheUI();
   }
+
+function deleteToDo(id) {
+  return toDos.filter(toDo ==> toDo.id !== id );
+
+  renderTheUI();
+};
+
 
   function renderTheUI() {
     const toDoList = document.getElementById('toDoList');
